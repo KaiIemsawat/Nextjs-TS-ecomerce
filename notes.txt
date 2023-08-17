@@ -20,3 +20,7 @@ Example use, if(!product) notFound(); // 'notFound()' come from -> import { notF
 
 To export metadata, 
 need to create an export function with this specific name `export async function generateMetadata()`
+
+Creating 'a custom loading page' by create 'loading.tsx' under 'src/app/' 
+
+For database between models, check `schema.prisma`
