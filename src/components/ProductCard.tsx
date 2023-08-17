@@ -28,7 +28,7 @@ function ProductCard({ product }: ProductCardProps) {
           //   these number are the largest an image could be
           width={720}
           height={400}
-          className="h-48 object-cover" // h-48 is the height of image
+          className="h-72 object-cover" // h-72 is the height of image (image pat of card)
         />
       </figure>
       <div className="card-body">

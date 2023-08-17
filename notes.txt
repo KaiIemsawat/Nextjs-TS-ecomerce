@@ -1,0 +1,22 @@
+In next.js, we may create a folder like this -> 'src/app/thisFolder/page.tsx'.
+Then, and we may navigate to localhost:3000/thisFolder to see the page.
+- Note that the name page.tsx is neccessary (much like index.tsx)
+
+In 'src/app/layout.tsx' we can create layout that will apply to all pages
+
+We may make a custom not found page under 'src/app/' the file name must be not-found.tsx
+
+To custom loading page, we need to create a file call loading.tsx (put in 'src/app/' to make it global)
+
+"use client";
+// ! "use client"; is used to declare that this is a client component.
+// ! need to be on the top most
+
+For this directory structure, /products/[id] <-- it's important to put id in []
+
+not-found.tsx is one of the specific file names.
+This file will be recognised by next.js as a custom page not found file.
+Example use, if(!product) notFound(); // 'notFound()' come from -> import { notFound } from "next/navigation";
+
+To export metadata, 
+need to create an export function with this specific name `export async function generateMetadata()`
