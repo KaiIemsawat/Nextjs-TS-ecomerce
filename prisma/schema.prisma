@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Model name could be different from collection name by using @@map("collectionName") below - @@ not @
+model Product {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  imageUrl    String
+  name        String
+  price       Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // using @@map("collectionName") to connect to the desired collection while using different model name
+  @@map("products")
+}
+
+// * npx prisma db pull -- to pull schema from database
+// * npx prisma db push -- to push the update schema to database 
+// * npx prisma generate -- each time after make any update
