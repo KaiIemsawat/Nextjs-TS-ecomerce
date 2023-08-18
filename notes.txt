@@ -24,3 +24,6 @@ need to create an export function with this specific name `export async function
 Creating 'a custom loading page' by create 'loading.tsx' under 'src/app/' 
 
 For database between models, check `schema.prisma`
+
+If see ERROR at import { Adapter } from "next-auth/adapters"
+try changing "bundler" to "node" in "moduleResolution" in tsconfig.json
