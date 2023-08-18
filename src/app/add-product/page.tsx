@@ -1,6 +1,8 @@
 import FormSubmitBtn from "@/components/FormSubmitBtn";
 import { prisma } from "@/lib/db/prisma";
+import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 // This will change page title only on this page
 export const metadata = {
@@ -9,6 +11,11 @@ export const metadata = {
 
 async function addProduct(formData: FormData) {
   "use server"; // <-- this tell NextJs that this is for server
+
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    redirect("/api/auth/signIn?callbackUrl=/add-product");
+  }
 
   const name = formData.get("name")?.toString(); // when use .get(thisValue), the value in () came from attribute name="thisValue"
   const description = formData.get("description")?.toString();
@@ -29,7 +36,12 @@ async function addProduct(formData: FormData) {
   redirect("/");
 }
 
-const AddProductPage = () => {
+const AddProductPage = async () => {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    redirect("/api/auth/signIn?callbackUrl=/add-product");
+  }
+
   return (
     <div>
       <h1 className="mb-3 text-lg font-bold">Add Product</h1>
