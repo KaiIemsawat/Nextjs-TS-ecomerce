@@ -19,6 +19,7 @@ module.exports = {
           success: "#06b6d4",
           warning: "#e7c21d",
           error: "#f43f5e",
+          "desc-text": "#3b3b32",
           body: {
             "background-color": "#e8eaea", // for dark mode theme
           },

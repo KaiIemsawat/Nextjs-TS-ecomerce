@@ -18,7 +18,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
   }
 
   return (
-    <div className="dropdown dropdown-end">
+    <div className="dropdown-end dropdown">
       <label tabIndex={0} className="btn btn-circle btn-ghost">
         <div className="indicator">
           <svg
@@ -27,7 +27,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="h-6 w-6"
+            className="h-6 w-6 text-secondary"
           >
             <path
               strokeLinecap="round"

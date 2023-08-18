@@ -35,7 +35,7 @@ function ProductCard({ product }: ProductCardProps) {
         <h2 className="card-title">{product.name}</h2>
         {/* if this product is considerred new, then display 'NEW' badge */}
         {isNew && <div className="badge badge-secondary">NEW</div>}
-        <p>{product.description}</p>
+        <p className="text-slate-600">{product.description}</p>
         <PriceTag price={product.price} />
       </div>
     </Link>
