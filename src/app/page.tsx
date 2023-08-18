@@ -8,6 +8,11 @@ export default async function Home() {
     orderBy: { id: "desc" }, // sorting by id, DESC (note, in MongoDB, ids will sort the same way as timestamps)
   });
 
+  // To verify if the item has been add within 7 days
+  const isNew =
+    Date.now() - new Date(products[0].createdAt).getTime() <
+    1000 * 60 * 60 * 24 * 7;
+
   return (
     <div>
       <div className="hero rounded-xl bg-base-200">
@@ -22,6 +27,8 @@ export default async function Home() {
           />
           <div>
             <h1 className="text-4xl font-bold">{products[0].name}</h1>
+            {/* if this product is considerred new, then display 'NEW' badge */}
+            {isNew && <div className="badge badge-secondary">NEW</div>}
             <p className="py-6">{products[0].description}</p>
             {/*
             Use <Link> that would act like <Button> because this component is not declare as "use client" 
