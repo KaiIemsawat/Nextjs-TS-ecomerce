@@ -50,14 +50,16 @@ export default async function Home({
               </h1>
               {/* if this product is considerred new, then display 'NEW' badge */}
               {isNew && <div className="badge badge-secondary">NEW</div>}
-              <p className="py-6 text-slate-600">{products[0].description}</p>
+              <p className="whitespace-pre-line py-6 text-slate-600">
+                {products[0].description}
+              </p>
               {/*
             Use <Link> that would act like <Button> because this component is not declare as "use client" 
             So, this component basicaly is a server component
             */}
               <Link
                 href={`/products/${products[0].id}`}
-                className="btn btn-primary"
+                className="btn btn-primary min-w-full"
               >
                 Check it out
               </Link>
