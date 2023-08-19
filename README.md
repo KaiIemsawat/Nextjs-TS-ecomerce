@@ -4,7 +4,7 @@
 
 ## About
 
-This is a part of my practice projects. The application allows users to login with their google account. This application will be deployed on Vercel osoon.
+This is a part of my practice projects. The application allows users to login with their google account. Then they may add items to cart. This is a responsive application. This application will be deployed on Vercel osoon.
 
 ## Links
 
@@ -15,7 +15,7 @@ This is a part of my practice projects. The application allows users to login wi
 
 ## Screenshots
 
-![screenshot](/server/uploads/notes.png "screenshot")
+![screenshot](/src/uploads/app-screenshot.png "screenshot")
 
 ## Available Commands
 
@@ -23,11 +23,7 @@ In the project directory, you can run:
 
 ### `"npm start"`,
 
-The app is built using `react` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:5173) to view it in the browser. You also need to run this command in both client and server directores using the same command, `npm start`, as well to completely run the app. This would launch `nodemon` and allow files on server side each time you update files. You will also see any lint errors in the console.
-
-### `"npm run build"`,
-
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
+The app is built using `NextJS` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. To run the application on localhost, the command `npm run dev` is needed.
 
 ## Built With
 
@@ -43,6 +39,7 @@ Builds the app for production to the `build` folder. It correctly bundles React 
 
 - [ ] Reliable Storage
 - [ ] Create dark mode
+- [ ] Need works on edit and delete items
 
 ## Author
 
