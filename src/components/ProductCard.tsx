@@ -2,6 +2,7 @@ import { Product } from "@prisma/client";
 import Link from "next/link";
 import PriceTag from "./PriceTag";
 import Image from "next/image";
+import styles from "../styles/Card.module.css";
 
 interface ProductCardProps {
   product: Product; // product type Product that come from prisma
@@ -31,11 +32,11 @@ function ProductCard({ product }: ProductCardProps) {
           className="h-72 object-cover" // h-72 is the height of image (image pat of card)
         />
       </figure>
-      <div className="card-body min-h-[300px]">
-        <h2 className="card-title text-neutral">{product.name}</h2>
+      <div className={`card-body h-[400px]`}>
+        <h2 className={`card-title text-neutral`}>{product.name}</h2>
         {/* if this product is considerred new, then display 'NEW' badge */}
         {isNew && <div className="badge badge-secondary">NEW</div>}
-        <p className="truncate whitespace-pre-line text-slate-600">
+        <p className={`whitespace-pre-line text-slate-600 ${styles.cardBody}`}>
           {product.description}
         </p>
         <PriceTag price={product.price} />
