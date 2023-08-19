@@ -49,9 +49,11 @@ export default async function ProductPage({
         priority
       />
       <div>
-        <h1 className="text-5kl font-bold">{product.name}</h1>
+        <h1 className="text-5xl font-bold text-neutral">{product.name}</h1>
         <PriceTag price={product.price} className="mt-4" />
-        <p className="whitespace-pre-line py-6">{product.description}</p>
+        <p className="whitespace-pre-line py-6 text-slate-600">
+          {product.description}
+        </p>
         <AddToCartButton
           productId={product.id}
           incrementProductQuantity={incrementProductQuantity}

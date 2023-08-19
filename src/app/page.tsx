@@ -45,7 +45,9 @@ export default async function Home({
               priority // tell nextJS that this image should be load first
             />
             <div>
-              <h1 className="text-4xl font-bold">{products[0].name}</h1>
+              <h1 className="text-4xl font-bold text-neutral">
+                {products[0].name}
+              </h1>
               {/* if this product is considerred new, then display 'NEW' badge */}
               {isNew && <div className="badge badge-secondary">NEW</div>}
               <p className="py-6 text-slate-600">{products[0].description}</p>

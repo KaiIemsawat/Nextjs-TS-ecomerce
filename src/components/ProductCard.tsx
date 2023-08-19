@@ -32,7 +32,7 @@ function ProductCard({ product }: ProductCardProps) {
         />
       </figure>
       <div className="card-body min-h-[300px]">
-        <h2 className="card-title">{product.name}</h2>
+        <h2 className="card-title text-neutral">{product.name}</h2>
         {/* if this product is considerred new, then display 'NEW' badge */}
         {isNew && <div className="badge badge-secondary">NEW</div>}
         <p className="truncate whitespace-pre-line text-slate-600">
