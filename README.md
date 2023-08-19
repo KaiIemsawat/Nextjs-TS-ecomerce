@@ -4,14 +4,12 @@
 
 ## About
 
-This is a part of my practice projects. The application allows users to login with their google account. Then they may add items to cart. This is a responsive application. This application will be deployed on Vercel osoon.
+This is a part of my practice projects. The application allows users to login with their google account. Then they may add items to cart. This is a responsive application. This application is deployed on Vercel.
 
 ## Links
 
-    - Will be deployed soon
-
 - [Repository](https://github.com/KaiIemsawat/Nextjs-TS-ecomerce "E-Commerce") ,`please don't mind my spelling on github repo`
-<!-- -   [Notes](http://54.89.66.246/ "Notes") -->
+- [E-commerce](https://nextjs-ts-ecommerce-kaiiemsawat.vercel.app/ "E-commerce")
 
 ## Screenshots
 
@@ -41,6 +39,7 @@ The app is built using `NextJS` so this command Runs the app in Development mode
 - [ ] Reliable Storage
 - [ ] Create dark mode
 - [ ] Need works on edit and delete items
+- [ ] Account info link under account icon when user click on icon
 
 ## Author
 
