@@ -19,7 +19,7 @@ export default function PaginationBar({
       <Link
         href={"?page=" + page}
         key={page}
-        className={`btn join-item ${
+        className={`btn join-item btn-sm ${
           currentPage == page ? "btn-active pointer-events-none" : ""
         }`}
       >
@@ -27,5 +27,30 @@ export default function PaginationBar({
       </Link>,
     );
   }
-  return <div className="join">{numberOfPageItems}</div>;
+  return (
+    <>
+      <div className="join hidden sm:block">{numberOfPageItems}</div>
+      <div className="join block sm:hidden">
+        {currentPage > 1 && (
+          <Link
+            href={"?page=" + (currentPage - 1)}
+            className="btn join-item btn-sm"
+          >
+            «
+          </Link>
+        )}
+        <button className="btn join-item btn-sm pointer-events-none">
+          Page {currentPage}
+        </button>
+        {currentPage < totalPages && (
+          <Link
+            href={"?page=" + (currentPage + 1)}
+            className="btn join-item btn-sm"
+          >
+            »
+          </Link>
+        )}
+      </div>
+    </>
+  );
 }
