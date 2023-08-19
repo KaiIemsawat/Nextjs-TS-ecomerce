@@ -31,11 +31,13 @@ function ProductCard({ product }: ProductCardProps) {
           className="h-72 object-cover" // h-72 is the height of image (image pat of card)
         />
       </figure>
-      <div className="card-body">
+      <div className="card-body min-h-[300px]">
         <h2 className="card-title">{product.name}</h2>
         {/* if this product is considerred new, then display 'NEW' badge */}
         {isNew && <div className="badge badge-secondary">NEW</div>}
-        <p className="text-slate-600">{product.description}</p>
+        <p className="truncate whitespace-pre-line text-slate-600">
+          {product.description}
+        </p>
         <PriceTag price={product.price} />
       </div>
     </Link>
