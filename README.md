@@ -21,7 +21,7 @@ This is a part of my practice projects. The application allows users to login wi
 
 In the project directory, you can run:
 
-### `"npm start"`,
+### `"npm run dev"`,
 
 The app is built using `NextJS` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. To run the application on localhost, the command `npm run dev` is needed.
 
